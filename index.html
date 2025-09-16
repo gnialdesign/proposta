@@ -3,73 +3,67 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Proposta – Redesign do Logotipo (Ibatintas)</title>
+  <title>Apresentação – Gnial Design</title>
   <style>
     :root{
-      --ink:#1f2937;          /* texto */
-      --muted:#6b7280;        /* texto secundário */
-      --bg:#f6f7fb;           /* fundo geral */
-      --card:#ffffff;         /* cartões */
-      --brand:#0c56b5;        /* azul principal */
-      --brand-ink:#0a3f85;    /* azul escuro para títulos */
-      --accent:#ffd24d;       /* amarelo suave para microdestaques */
+      --ink:#1f2937;
+      --muted:#6b7280;
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --brand:#0c56b5;
+      --brand-ink:#0a3f85;
+      --accent:#ffd24d;
       --radius:18px;
       --shadow:0 10px 26px rgba(0,0,0,.08);
     }
-
     *{box-sizing:border-box}
     body{margin:0;font:16px/1.55 'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
-
     .wrap{max-width:1120px;margin:0 auto;padding:28px}
 
-    /* HERO */
     .hero{background:linear-gradient(135deg,#0b1e3e 0%, #102a5c 60%, #14356d 100%);color:#fff;border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}
     .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:40px 32px}
     .eyebrow{letter-spacing:.12em;font-weight:800;font-size:.78rem;opacity:.85}
     .headline{font-size:2.4rem;line-height:1.15;margin:.35rem 0 .5rem;font-weight:800}
     .sub{opacity:.92;max-width:56ch}
-    .cta-row{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
-    .btn{border:0;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer}
-    .btn-primary{background:#ffd24d;color:#0b1e3e}
-    .btn-ghost{background:transparent;border:2px solid rgba(255,255,255,.35);color:#fff}
 
-    .hero-visual{position:relative;height:340px;display:grid;place-items:center}
-    .bubble{position:absolute;inset:30px;border-radius:28px;background:linear-gradient(145deg,#1b2f5e,#0c56b5);box-shadow:0 20px 50px rgba(0,0,0,.35)}
-    .badge{position:absolute;right:18px;top:18px;background:rgba(255,255,255,.12);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);padding:6px 10px;border-radius:999px;font-size:.78rem}
+    .hero-visual{position:relative;height:300px;display:grid;place-items:center}
+    .hero-visual img{width:100%;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+    .btn-behance{margin-top:12px;display:inline-block;background:#ffd24d;color:#0b1e3e;font-weight:800;padding:10px 16px;border-radius:10px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.25)}
 
     .wave{display:block;height:34px;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="34" viewBox="0 0 160 34"><path fill="%23f6f7fb" d="M0,34 C20,10 40,10 60,34 C80,10 100,10 120,34 C140,10 160,10 180,34 L0,34 Z"/></svg>') repeat-x center/160px 34px}
 
-    /* Sections */
     .section{margin:26px 0}
-    .title{font-size:1rem;color:var(--brand-ink);letter-spacing:.08em;font-weight:900;margin-bottom:8px}
+    .title{font-size:.95rem;color:var(--brand-ink);letter-spacing:.08em;font-weight:900;margin-bottom:8px}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .cards.two{grid-template-columns:repeat(2,1fr)}
     .card{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:18px}
     .card h3{margin:0 0 .35rem;color:var(--brand-ink)}
     .card p{margin:.25rem 0 .5rem;color:var(--muted)}
     .card ul{margin:.25rem 0 0;padding-left:18px;color:var(--ink)}
     .pill{display:inline-block;background:#eef3ff;color:var(--brand-ink);padding:4px 10px;border-radius:999px;font-size:.82rem;font-weight:700}
 
-    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .stat{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:18px;text-align:center}
-    .stat b{display:block;font-size:1.6rem;color:var(--brand-ink)}
-    .stat span{color:var(--muted)}
+    .callout{background:linear-gradient(180deg,#0c56b5, #0a3f85);color:#fff;border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .kpi{text-align:center;background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:16px}
+    .kpi b{display:block;font-size:1.4rem;color:var(--brand-ink)}
+    .kpi span{color:var(--muted)}
 
-    .price{font-size:2rem;font-weight:900;color:var(--brand)}
     footer{margin:28px 0 10px;text-align:center;color:var(--muted)}
+    footer a{color:var(--brand);font-weight:600;text-decoration:none}
 
     .page{page-break-after:always}
 
     @media (max-width:900px){
       .hero-inner{grid-template-columns:1fr}
       .cards{grid-template-columns:1fr}
-      .stats{grid-template-columns:1fr}
+      .kpis{grid-template-columns:1fr}
     }
 
     @media print{
       @page{size:A4;margin:12mm}
       body{background:#fff}
       .hero{box-shadow:none}
-      .card,.stat{box-shadow:none;border:1px solid #e5e7eb}
+      .card,.kpi{box-shadow:none;border:1px solid #e5e7eb}
     }
   </style>
 </head>
@@ -81,54 +75,53 @@
       <section class="hero">
         <div class="hero-inner">
           <div>
-            <div class="eyebrow">PROPOSTA COMERCIAL</div>
-            <div class="badge">Cliente: Ibatintas</div>
-            <h1 class="headline">Redesign / Modernização do Logotipo</h1>
-            <p class="sub">Atualizar o logotipo da Ibatintas, mantendo sua essência e reconhecimento, com foco em simplicidade, legibilidade e versatilidade para mídias digitais e impressas.</p>
-            <div class="cta-row">
-              <button class="btn btn-primary" onclick="window.print()">Exportar PDF</button>
-              <button class="btn btn-ghost" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">Ver investimento</button>
-            </div>
+            <div class="eyebrow">APRESENTAÇÃO</div>
+            <h1 class="headline">Gnial Design</h1>
+            <p class="sub">Designer gráfico com experiência em identidade visual, social media, impressos e estratégias digitais. Auxiliamos empresas e profissionais a comunicarem suas marcas de forma clara, criativa e eficiente.</p>
+            <a href="https://www.behance.net/eduardogermano" target="_blank" class="btn-behance">Ver portfólio no Behance</a>
           </div>
-          <!--<div class="hero-visual">
-            <div class="bubble"></div>
-          </div>--!>
+          <div class="hero-visual">
+            <a href="https://www.behance.net/eduardogermano" target="_blank">
+              <img src="assets/behance_edu.png" alt="Prévia do portfólio Behance">
+            </a>
+          </div>
         </div>
       </section>
       <div class="wave"></div>
 
+      <!-- Serviços -->
       <section class="section">
-        <div class="title">ESCOPO</div>
+        <div class="title">SERVIÇOS</div>
         <div class="cards">
           <article class="card">
             <span class="pill">01</span>
-            <h3>Análise da Marca Atual</h3>
-            <p>Mapeamento do que mantém reconhecimento e do que precisa evoluir.</p>
-            <ul>
-              <li>Levantamento de pontos fortes</li>
-              <li>Correções de proporção e legibilidade</li>
-            </ul>
+            <h3>Identidade Visual</h3>
+            <p>Criação de logotipos, paletas de cores e manuais de marca.</p>
           </article>
-
           <article class="card">
             <span class="pill">02</span>
-            <h3>Propostas de Redesign</h3>
-            <p>Criação de <strong>opção</strong> modernizada.</p>
-            <ul>
-              <li>Variações horizontal/vertical/reduzida</li>
-              <li>Aplicação do slogan</li>
-            </ul>
+            <h3>Social Media</h3>
+            <p>Design de posts, stories e campanhas digitais para redes sociais.</p>
           </article>
-
           <article class="card">
             <span class="pill">03</span>
-            <h3>Entrega Final</h3>
-            <p>Arquivos prontos + mini manual (4–6 págs).</p>
-            <ul>
-              <li>AI, PDF, SVG + PNG/JPG</li>
-              <li>Positivo, negativo, PB</li>
-              <li>Paleta e tipografia</li>
-            </ul>
+            <h3>Impressos & Editorial</h3>
+            <p>Criação de encartes, catálogos, revistas e materiais de PDV.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Diferenciais -->
+      <section class="section">
+        <div class="title">DIFERENCIAIS</div>
+        <div class="cards two">
+          <article class="card">
+            <h3>Experiência</h3>
+            <p>Mais de 6 anos atuando em design gráfico e marketing visual, com projetos em diversas áreas.</p>
+          </article>
+          <article class="card">
+            <h3>Abordagem Estratégica</h3>
+            <p>Não é apenas execução de artes, mas é pensar em como o design conecta-se com os objetivos do cliente e sua comunicação.</p>
           </article>
         </div>
       </section>
@@ -137,49 +130,40 @@
     <!-- PAGE 2 -->
     <div class="page">
       <section class="section">
-        <div class="title">PRAZO</div>
-        <div class="stats">
-          <div class="stat"><b>15 dias úteis</b><span>Projeto completo</span></div>
-          <div class="stat"><b>2 rodadas</b><span>De ajustes incluídas</span></div>
-          <div class="stat"><b>On-line</b><span>Entrega e suporte</span></div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="title">INVESTIMENTO</div>
-        <div class="cards" style="grid-template-columns:1fr 1fr;">
+        <div class="title">PROCESSO DE TRABALHO</div>
+        <div class="cards">
           <article class="card">
-            <h3>Valor Fechado</h3>
-            <div class="price">R$ 1.200,00</div>
-            <p>Pagamento: 50% na aprovação e 50% na entrega final.</p>
+            <h3>Briefing</h3>
+            <p>Entendimento das necessidades e objetivos do cliente.</p>
           </article>
           <article class="card">
-            <h3>Inclui</h3>
-            <ul>
-              <li>Redesign</li>
-              <li>Variações de uso (horizontal/vertical/reduzida)</li>
-              <li>Mini manual (4–6 págs)</li>
-            </ul>
+            <h3>Criação</h3>
+            <p>Desenvolvimento de conceitos visuais alinhados ao briefing.</p>
+          </article>
+          <article class="card">
+            <h3>Entrega</h3>
+            <p>Apresentação de arquivos finais organizados e prontos para uso.</p>
           </article>
         </div>
       </section>
 
       <section class="section">
-        <div class="title">OBSERVAÇÕES</div>
-        <div class="card">
-          <ul>
-            <li>Escopo distinto da vetorização.</li>
-            <li>Prazo conta após briefing aprovado e materiais recebidos.</li>
-            <li>Alterações fora do escopo serão orçadas à parte.</li>
-			<li>Proposta válida até dia 30 de setembro de 2025.</li>
-          </ul>
+        <div class="title">NÚMEROS</div>
+        <div class="kpis">
+          <div class="kpi"><b>+ de 6</b><span>Anos de experiência</span></div>
+          <div class="kpi"><b>+ de 100</b><span>Projetos concluídos</span></div>
+          <div class="kpi"><b>+ de 10</b><span>Áreas de atuação</span></div>
         </div>
+      </section>
+
+      <section class="section callout">
+        <h3 style="margin:0 0 .35rem">Vamos conversar?</h3>
+        <p style="margin:.25rem 0 .5rem;opacity:.95">Entre em contato para falarmos sobre como o design pode ajudar sua marca a se destacar.</p>
+        <p style="margin-top:12px"><a href="https://wa.me/5528999823698" target="_blank" style="background:#ffd24d;color:#0b1e3e;font-weight:800;padding:10px 16px;border-radius:10px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.25)">Falar no WhatsApp</a></p>
       </section>
 
       <footer>
-        Contato:
-		<a href="mailto:mais.gnial@gmail.com">mais.gnial@gmail.com</a> • <!--• (28) 99982-3698--!>
-		<a href="https://wa.me/5528999823698" target="_blank">Fale comigo no WhatsApp</a>
+        Criado por <strong>Gnial Design</strong> • Designer gráfico & Estratégia digital • <a href="mailto:mais.gnial@gmail.com">mais.gnial@gmail.com</a> • <a href="https://wa.me/5528999823698" target="_blank">(28) 99982-3698</a>
       </footer>
     </div>
 
