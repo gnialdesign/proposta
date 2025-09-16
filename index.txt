@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Proposta – Redesign do Logotipo (Ibatintas)</title>
+  <title>Proposta – Identidade Visual</title>
   <style>
     :root{
       --ink:#1f2937;          /* texto */
@@ -12,7 +12,7 @@
       --card:#ffffff;         /* cartões */
       --brand:#0c56b5;        /* azul principal */
       --brand-ink:#0a3f85;    /* azul escuro para títulos */
-      --accent:#ffd24d;       /* amarelo suave para microdestaques */
+      --accent:#ffd24d;       /* amarelo suave para microdestaques (pontinhos, tags) */
       --radius:18px;
       --shadow:0 10px 26px rgba(0,0,0,.08);
     }
@@ -22,24 +22,26 @@
 
     .wrap{max-width:1120px;margin:0 auto;padding:28px}
 
-    /* HERO */
+    /* HERO no estilo da referência: esquerda texto, direita imagem/shape */
     .hero{background:linear-gradient(135deg,#0b1e3e 0%, #102a5c 60%, #14356d 100%);color:#fff;border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}
     .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:40px 32px}
     .eyebrow{letter-spacing:.12em;font-weight:800;font-size:.78rem;opacity:.85}
     .headline{font-size:2.4rem;line-height:1.15;margin:.35rem 0 .5rem;font-weight:800}
-    .sub{opacity:.92;max-width:56ch}
+    .sub{opacity:.9;max-width:52ch}
     .cta-row{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
     .btn{border:0;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer}
     .btn-primary{background:#ffd24d;color:#0b1e3e}
     .btn-ghost{background:transparent;border:2px solid rgba(255,255,255,.35);color:#fff}
 
-    .hero-visual{position:relative;height:340px;display:grid;place-items:center}
+    /* Bloco de imagem/shape da direita */
+   /* .hero-visual{position:relative;height:340px;display:grid;place-items:center}
     .bubble{position:absolute;inset:30px;border-radius:28px;background:linear-gradient(145deg,#1b2f5e,#0c56b5);box-shadow:0 20px 50px rgba(0,0,0,.35)}
     .badge{position:absolute;right:18px;top:18px;background:rgba(255,255,255,.12);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);padding:6px 10px;border-radius:999px;font-size:.78rem}
 
+    /* divisor ondulado (efeito serrilhado) */
     .wave{display:block;height:34px;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="34" viewBox="0 0 160 34"><path fill="%23f6f7fb" d="M0,34 C20,10 40,10 60,34 C80,10 100,10 120,34 C140,10 160,10 180,34 L0,34 Z"/></svg>') repeat-x center/160px 34px}
 
-    /* Sections */
+    /* Seções em cards */
     .section{margin:26px 0}
     .title{font-size:1rem;color:var(--brand-ink);letter-spacing:.08em;font-weight:900;margin-bottom:8px}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -47,6 +49,7 @@
     .card h3{margin:0 0 .35rem;color:var(--brand-ink)}
     .card p{margin:.25rem 0 .5rem;color:var(--muted)}
     .card ul{margin:.25rem 0 0;padding-left:18px;color:var(--ink)}
+
     .pill{display:inline-block;background:#eef3ff;color:var(--brand-ink);padding:4px 10px;border-radius:999px;font-size:.82rem;font-weight:700}
 
     .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -55,8 +58,10 @@
     .stat span{color:var(--muted)}
 
     .price{font-size:2rem;font-weight:900;color:var(--brand)}
+
     footer{margin:28px 0 10px;text-align:center;color:var(--muted)}
 
+    /* layout de duas páginas ao imprimir/compartilhar */
     .page{page-break-after:always}
 
     @media (max-width:900px){
@@ -83,51 +88,53 @@
           <div>
             <div class="eyebrow">PROPOSTA COMERCIAL</div>
             <div class="badge">Cliente: Ibatintas</div>
-            <h1 class="headline">Redesign / Modernização do Logotipo</h1>
-            <p class="sub">Atualizar o logotipo da Ibatintas, mantendo sua essência e reconhecimento, com foco em simplicidade, legibilidade e versatilidade para mídias digitais e impressas.</p>
+            <h1 class="headline">Identidade Visual a partir da marca</h1>
+            <p class="sub">Projeto focado em padronizar e profissionalizar o uso da marca existente: vetorização, criação de emblema/selo e manual básico com cores, tipografias e regras de aplicação.</p>
             <div class="cta-row">
-              <button class="btn btn-primary" onclick="window.print()">Exportar PDF</button>
               <button class="btn btn-ghost" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">Ver investimento</button>
             </div>
           </div>
-          <!--<div class="hero-visual">
+          <div class="hero-visual">
             <div class="bubble"></div>
-          </div>--!>
+           
+          </div>
         </div>
       </section>
       <div class="wave"></div>
 
+      <!-- grid de escopo no estilo da referência -->
       <section class="section">
         <div class="title">ESCOPO</div>
         <div class="cards">
           <article class="card">
             <span class="pill">01</span>
-            <h3>Análise da Marca Atual</h3>
-            <p>Mapeamento do que mantém reconhecimento e do que precisa evoluir.</p>
+            <h3>Vetorização da Marca</h3>
+            <p>Arquivos finais em AI, PDF, SVG e PNG (fundo transparente e colorido).</p>
             <ul>
-              <li>Levantamento de pontos fortes</li>
-              <li>Correções de proporção e legibilidade</li>
+              <li>Versões positivo, negativo e PB</li>
+              <li>Organização de pastas e nomes</li>
             </ul>
           </article>
 
           <article class="card">
             <span class="pill">02</span>
-            <h3>Propostas de Redesign</h3>
-            <p>Criação de <strong>opção</strong> modernizada.</p>
+            <h3>Emblema / Selo</h3>
+            <p>Versão curta para perfis, carimbos, adesivos e aplicações reduzidas.</p>
             <ul>
-              <li>Variações horizontal/vertical/reduzida</li>
-              <li>Aplicação do slogan</li>
+              <li>Variações responsivas</li>
+              <li>Favicon / ícone</li>
             </ul>
           </article>
 
           <article class="card">
             <span class="pill">03</span>
-            <h3>Entrega Final</h3>
-            <p>Arquivos prontos + mini manual (4–6 págs).</p>
+            <h3>Manual Básico</h3>
+            <p>Documento de 6–10 páginas com padrões de uso.</p>
             <ul>
-              <li>AI, PDF, SVG + PNG/JPG</li>
-              <li>Positivo, negativo, PB</li>
-              <li>Paleta e tipografia</li>
+              <li>Paleta cromática (CMYK, RGB, HEX)</li>
+              <li>Tipografia (títulos e textos)</li>
+              <li>Regras de aplicação</li>
+              <li>Exemplos em mockups</li>
             </ul>
           </article>
         </div>
@@ -139,9 +146,8 @@
       <section class="section">
         <div class="title">PRAZO</div>
         <div class="stats">
-          <div class="stat"><b>15 dias úteis</b><span>Projeto completo</span></div>
-          <div class="stat"><b>2 rodadas</b><span>De ajustes incluídas</span></div>
-          <div class="stat"><b>On-line</b><span>Entrega e suporte</span></div>
+            <div class="stat"><b>10 dias úteis</b><span>Vetorização + Selo</span></div>
+            <div class="stat"><b>15 dias úteis</b><span>Projeto Completo com Manual + Mockups</span></div>
         </div>
       </section>
 
@@ -156,9 +162,9 @@
           <article class="card">
             <h3>Inclui</h3>
             <ul>
-              <li>Redesign</li>
-              <li>Variações de uso (horizontal/vertical/reduzida)</li>
-              <li>Mini manual (4–6 págs)</li>
+              <li>Até 2 rodadas de ajustes por etapa</li>
+              <li>Arquivos finais organizados</li>
+              <li>Suporte para dúvidas de aplicação</li>
             </ul>
           </article>
         </div>
@@ -168,18 +174,15 @@
         <div class="title">OBSERVAÇÕES</div>
         <div class="card">
           <ul>
-            <li>Escopo distinto da vetorização.</li>
-            <li>Prazo conta após briefing aprovado e materiais recebidos.</li>
+            <li>Não inclui registro de marca no INPI.</li>
+            <li>Prazo inicia após recebimento do briefing aprovado e dos materiais.</li>
             <li>Alterações fora do escopo serão orçadas à parte.</li>
-			<li>Proposta válida até dia 30 de setembro de 2025.</li>
           </ul>
         </div>
       </section>
 
       <footer>
-        Contato:
-		<a href="mailto:mais.gnial@gmail.com">mais.gnial@gmail.com</a> • <!--• (28) 99982-3698--!>
-		<a href="https://wa.me/5528999823698" target="_blank">Fale comigo no WhatsApp</a>
+        Contato: <a href="mailto:mais.gnial@gmail.com">mais.gnial@gmail.com</a> • (28) 99982-3698
       </footer>
     </div>
 
