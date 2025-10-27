@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Proposta – Criação de Logotipo (Refix)</title>
+  <title>Apresentação – Gnial Design</title>
   <style>
     :root{
       --ink:#1f2937;
@@ -14,125 +14,191 @@
       --brand-ink:#0a3f85;
       --accent:#ffd24d;
       --radius:18px;
-      --shadow:0 6px 20px rgba(0,0,0,.08);
+      --shadow:0 10px 26px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font:16px/1.55 'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    .wrap{max-width:1120px;margin:0 auto;padding:28px}
+
+    .hero{background:linear-gradient(135deg,#0b1e3e 0%, #102a5c 60%, #14356d 100%);color:#fff;border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}
+    .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:40px 32px}
+    .eyebrow{letter-spacing:.12em;font-weight:800;font-size:.78rem;opacity:.85}
+    .headline{font-size:2.4rem;line-height:1.15;margin:.35rem 0 .5rem;font-weight:800}
+    .sub{opacity:.92;max-width:56ch}
+
+    .hero-visual{position:relative;height:300px;display:grid;place-items:center}
+    .hero-visual img{width:100%;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+    .btn-behance{margin-top:12px;display:inline-block;background:#ffd24d;color:#0b1e3e;font-weight:800;padding:10px 16px;border-radius:10px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+
+    .wave{display:block;height:34px;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="34" viewBox="0 0 160 34"><path fill="%23f6f7fb" d="M0,34 C20,10 40,10 60,34 C80,10 100,10 120,34 C140,10 160,10 180,34 L0,34 Z"/></svg>') repeat-x center/160px 34px}
+
+    .section{margin:26px 0}
+    .title{font-size:.95rem;color:var(--brand-ink);letter-spacing:.08em;font-weight:900;margin-bottom:8px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .cards.two{grid-template-columns:repeat(2,1fr)}
+    .card{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:18px}
+    .card h3{margin:0 0 .35rem;color:var(--brand-ink)}
+    .card p{margin:.25rem 0 .5rem;color:var(--muted)}
+    .card ul{margin:.25rem 0 0;padding-left:18px;color:var(--ink)}
+    .pill{display:inline-block;background:#eef3ff;color:var(--brand-ink);padding:4px 10px;border-radius:999px;font-size:.82rem;font-weight:700}
+
+    .callout{background:linear-gradient(180deg,#0c56b5, #0a3f85);color:#fff;border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .kpi{text-align:center;background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:16px}
+    .kpi b{display:block;font-size:1.4rem;color:var(--brand-ink)}
+    .kpi span{color:var(--muted)}
+
+    footer{margin:28px 0 10px;text-align:center;color:var(--muted)}
+    footer a{color:var(--brand);font-weight:600;text-decoration:none}
+
+    /* Social links */
+    .social{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+    .social a{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #e5e7eb;color:var(--brand);padding:8px 12px;border-radius:999px;font-weight:700;box-shadow:var(--shadow);text-decoration:none}
+    .icon{width:18px;height:18px;display:inline-block}
+    .icon svg{width:18px;height:18px;display:block}
+
+    .page{page-break-after:always}
+
+    @media (max-width:900px){
+      .hero-inner{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .kpis{grid-template-columns:1fr}
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font:16px/1.55 'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);margin:0}
-
-    .wrap{max-width:780px;margin:0 auto;padding:20px}
-
-    .hero{background:linear-gradient(135deg,#0b1e3e 0%, #102a5c 60%, #14356d 100%);color:#fff;border-radius:22px;padding:32px 24px;box-shadow:var(--shadow);text-align:center}
-    .eyebrow{letter-spacing:.12em;font-weight:800;font-size:.75rem;opacity:.85;text-transform:uppercase}
-    .headline{font-size:1.9rem;line-height:1.2;margin:.5rem 0;font-weight:800}
-    .sub{opacity:.9;margin-top:.4rem}
-    .cta-row{margin-top:16px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
-    .btn{border:0;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer;font-size:.9rem}
-    .btn-primary{background:#ffd24d;color:#0b1e3e}
-    .btn-ghost{background:transparent;border:2px solid rgba(255,255,255,.35);color:#fff}
-
-    .section{margin:30px 0}
-    .title{text-align:center;font-size:1rem;color:var(--brand-ink);letter-spacing:.08em;font-weight:900;margin-bottom:12px}
-
-    .card{background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding:20px;margin-bottom:16px}
-    .card h3{margin-bottom:8px;color:var(--brand-ink);font-size:1.1rem}
-    .card p{margin-bottom:6px;color:var(--muted)}
-    .card ul{margin-left:18px;color:var(--ink)}
-
-    .price{font-size:1.8rem;font-weight:900;color:var(--brand)}
-    .discount s{color:#9ca3af;font-size:1rem;margin-right:8px}
-    .final-price{color:var(--brand-ink);font-weight:900}
-
-    footer{margin:28px 0 10px;text-align:center;color:var(--muted);font-size:.9rem}
-
-    @media (max-width:600px){
-      .headline{font-size:1.6rem}
-      .price{font-size:1.6rem}
-      .wrap{padding:16px}
-      .card{padding:16px}
+    @media print{
+      @page{size:A4;margin:12mm}
+      body{background:#fff}
+      .hero{box-shadow:none}
+      .card,.kpi{box-shadow:none;border:1px solid #e5e7eb}
+      .social a{box-shadow:none}
     }
   </style>
 </head>
 <body>
   <div class="wrap">
 
-    <section class="hero">
-      <div class="eyebrow">Proposta Comercial</div>
-      <h1 class="headline">Criação de Logotipo e Identidade Visual</h1>
-      <p class="sub">Desenvolvimento de um logotipo exclusivo e registrável para a marca <strong>Refix</strong>, com foco em originalidade, profissionalismo e diferenciação no mercado de tecnologia e revenda de smartphones.</p>
-      <div class="cta-row">
-        <button class="btn btn-primary" onclick="window.print()">Exportar PDF</button>
-        <a class="btn btn-ghost" href="https://wa.me/5528999823698" target="_blank">Fale comigo</a>
-      </div>
-    </section>
+    <!-- PAGE 1 -->
+    <div class="page">
+      <section class="hero">
+        <div class="hero-inner">
+          <div>
+            <div class="eyebrow">APRESENTAÇÃO</div>
+            <h1 class="headline">Gnial Design</h1>
+            <p class="sub">Designer gráfico com experiência em identidade visual, social media, impressos e estratégias digitais. Auxiliamos empresas e profissionais a comunicarem suas marcas de forma clara, criativa e eficiente.</p>
+            <a href="https://www.behance.net/eduardogermano" target="_blank" class="btn-behance">Ver portfólio no Behance</a>
+          </div>
+          <div class="hero-visual">
+            <a href="https://www.behance.net/eduardogermano" target="_blank">
+              <img src="assets/behance_edu.png" alt="Prévia do portfólio Behance">
+            </a>
+          </div>
+        </div>
+      </section>
+      <div class="wave"></div>
 
-    <section class="section">
-      <div class="title">ESCOPO</div>
-      <div class="card">
-        <h3>1. Pesquisa e Estratégia</h3>
-        <ul>
-          <li>Estudo de concorrência e referências visuais</li>
-          <li>Definição de estilo visual e proposta conceitual</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>2. Criação de Logotipo</h3>
-        <ul>
-          <li>Desenvolvimento de propostas criativas</li>
-          <li>Variações horizontal, vertical e reduzida</li>
-          <li>Aplicação em fundos claros e escuros</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>3. Entrega e Aplicações</h3>
-        <ul>
-          <li>Arquivos finais (AI, PDF, SVG, PNG/JPG)</li>
-          <li>Versões: positivo, negativo e PB</li>
-          <li><strong>Guia de Aplicação Visual da Marca</strong> (4–6 páginas)</li>
-        </ul>
-      </div>
-    </section>
+      <!-- Serviços -->
+      <section class="section">
+        <div class="title">SERVIÇOS</div>
+        <div class="cards">
+          <article class="card">
+            <span class="pill">01</span>
+            <h3>Identidade Visual</h3>
+            <p>Criação de logotipos, paletas de cores e manuais de marca.</p>
+          </article>
+          <article class="card">
+            <span class="pill">02</span>
+            <h3>Social Media</h3>
+            <p>Design de posts, stories e campanhas digitais para redes sociais.</p>
+          </article>
+          <article class="card">
+            <span class="pill">03</span>
+            <h3>Impressos & Editorial</h3>
+            <p>Criação de encartes, catálogos, revistas e materiais de PDV.</p>
+          </article>
+        </div>
+      </section>
 
-    <section class="section">
-      <div class="title">PRAZO</div>
-      <div class="card" style="text-align:center">
-        <p><strong>12 a 15 dias úteis</strong> para conclusão do projeto</p>
-        <p><strong>2 rodadas</strong> de ajustes incluídas</p>
-        <p>Entrega e suporte 100% online</p>
-      </div>
-    </section>
+      <!-- Diferenciais -->
+      <section class="section">
+        <div class="title">DIFERENCIAIS</div>
+        <div class="cards two">
+          <article class="card">
+            <h3>Experiência</h3>
+            <p>Mais de 6 anos atuando em design gráfico e marketing visual, com projetos em diversas áreas.</p>
+          </article>
+          <article class="card">
+            <h3>Abordagem Estratégica</h3>
+            <p>Não é apenas execução de artes, mas é pensar em como o design conecta-se com os objetivos do cliente e sua comunicação.</p>
+          </article>
+        </div>
+      </section>
+    </div>
 
-    <section class="section">
-      <div class="title">INVESTIMENTO</div>
-      <div class="card" style="text-align:center">
-        <p class="discount"><s>R$ 1.365,00</s> <span class="price">R$ 1.145,00</span></p>
-              <p>Pagamento: 50% na aprovação e 50% na entrega final.</p>
-      </div>
-      <div class="card">
-        <h3>Inclui</h3>
-        <ul>
-          <li>Criação do logotipo</li>
-          <li>Variações de uso</li>
-          <li><strong>Guia de Aplicação Visual da Marca</strong></li>
-          <li>Consultoria leve para aplicação da marca</li>
-        </ul>
-      </div>
-    </section>
+    <!-- PAGE 2 -->
+    <div class="page">
+      <section class="section">
+        <div class="title">PROCESSO DE TRABALHO</div>
+        <div class="cards">
+          <article class="card">
+            <h3>Briefing</h3>
+            <p>Entendimento das necessidades e objetivos do cliente.</p>
+          </article>
+          <article class="card">
+            <h3>Criação</h3>
+            <p>Desenvolvimento de conceitos visuais alinhados ao briefing.</p>
+          </article>
+          <article class="card">
+            <h3>Entrega</h3>
+            <p>Apresentação de arquivos finais organizados e prontos para uso.</p>
+          </article>
+        </div>
+      </section>
 
-    <section class="section">
-      <div class="title">OBSERVAÇÕES</div>
-      <div class="card">
-        <ul>
-          <li>O prazo conta a partir da aprovação do briefing e recebimento de materiais.</li>
-          <li>Alterações fora do escopo serão orçadas separadamente.</li>
-          <li>Proposta adaptável para envio digital e visualização mobile.</li>
-        </ul>
-      </div>
-    </section>
+      <section class="section">
+        <div class="title">NÚMEROS</div>
+        <div class="kpis">
+          <div class="kpi"><b>+ de 6</b><span>Anos de experiência</span></div>
+          <div class="kpi"><b>+ de 100</b><span>Projetos concluídos</span></div>
+          <div class="kpi"><b>+ de 10</b><span>Áreas de atuação</span></div>
+        </div>
+      </section>
 
-    <footer>
-      Contato: <a href="mailto:mais.gnial@gmail.com">mais.gnial@gmail.com</a> • <a href="https://wa.me/5528999823698" target="_blank">WhatsApp</a>
-    </footer>
+      <section class="section callout">
+        <h3 style="margin:0 0 .35rem">Vamos conversar?</h3>
+        <p style="margin:.25rem 0 .5rem;opacity:.95">Entre em contato para falarmos sobre como o design pode ajudar sua marca a se destacar.</p>
+        <p style="margin-top:12px"><a href="https://wa.me/5528999823698" target="_blank" style="background:#ffd24d;color:#0b1e3e;font-weight:800;padding:10px 16px;border-radius:10px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.25)">Falar no WhatsApp</a></p>
+      </section>
+
+      <footer>
+        <div>Criado por <strong>Gnial Design</strong> • Designer gráfico & estratégia digital</div>
+        <div class="social" aria-label="Canais de contato">
+          <a href="mailto:mais.gnial@gmail.com" target="_blank" aria-label="Enviar e-mail">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"/><path d="M22 8l-10 6L2 8"/></svg>
+            </span>
+            
+          </a>
+          <a href="https://www.instagram.com/gnialdesigner" target="_blank" aria-label="Instagram">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"/><path d="M17.5 6.5h.01"/></svg>
+            </span>
+            
+          </a>
+          <a href="https://wa.me/5528999823698" target="_blank" aria-label="WhatsApp">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 11.8c0 4.8-4 8.7-8.9 8.7-1.6 0-3.1-.4-4.4-1.2l-4 1.3 1.3-3.9c-.9-1.4-1.4-3-1.4-4.8C3 7 7 3.1 11.8 3.1c4.9 0 8.7 3.9 8.7 8.7Zm-5.1 4.1c.2.1.5.2.7.1.2-.1 1-.4 1.2-.8.1-.4.1-.8 0-.9s-.4-.3-.8-.5c-.4-.2-1.1-.6-1.3-.6-.2 0-.4 0-.6.3-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.2-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-2-.2-.6-.4-.5-.6-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.1 1.4 3.3c.2.2 2.4 3.6 5.8 4.9Z"/></svg>
+            </span>
+            
+          </a>
+          <a href="https://www.behance.net/eduardogermano" target="_blank" aria-label="Behance">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="white" ><rect x="2.5" y="3.5" width="19" height="17" rx="3"/><text x="3" y="18" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="currentColor">Bē</text></svg>
+            </span>
+            
+          </a>
+        </div>
+      </footer>
+    </div>
 
   </div>
 </body>
